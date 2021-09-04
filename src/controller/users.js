@@ -82,7 +82,7 @@ module.exports = {
         helper.response(res, 'ok', result[0]);
       })
       .catch((err) => {
-        helper.response(res, 'Not Found', null, 404);
+        helper.response(res, err.message, null, 404);
       });
   },
   updateProfile: async (req, res) => {
